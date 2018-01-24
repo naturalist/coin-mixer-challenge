@@ -1,0 +1,27 @@
+{
+  "name": "coin-mixer-challenge",
+  "version": "1.0.0",
+  "description": "Coin Mixer Challenge",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naturalist/coin-mixer-challenge.git"
+  },
+  "author": "Stefan G.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naturalist/coin-mixer-challenge/issues"
+  },
+  "homepage": "https://github.com/naturalist/coin-mixer-challenge#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "config": "^1.29.2",
+    "express": "^4.16.2"
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "mixer": {
+        "address": "Mixer",
+        "commission": 0.03,
+        "timeout": 3000
+    },
+
+    "verify": {
+        "timeout": 3000,
+        "tries": 100
+    }
+}
