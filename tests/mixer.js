@@ -21,7 +21,7 @@ describe('Mixer', ()=> {
     
     var stub
 
-    before(()=> stub = sinon.stub(jobcoin, "sendCoins"))
+    before(()=> stub = sinon.stub(jobcoin, "send"))
     after( ()=> stub.restore())
 
     beforeEach(()=> {

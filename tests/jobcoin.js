@@ -23,11 +23,11 @@ describe('getAddressInfo', ()=> {
   it('returns transactions', ()=> expect(json).to.have.property('transactions'))
 })
 
-describe('sendCoins', ()=> {
+describe('send', ()=> {
   var code, json
 
   before((done)=> {
-    jobcoin.sendCoins('Alice', 'Bob', 0.01, (c, j) => {
+    jobcoin.send('Alice', 'Bob', 0.01, (c, j) => {
       code = c
       json = j
       done()
