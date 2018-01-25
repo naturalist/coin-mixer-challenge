@@ -21,7 +21,10 @@
   "homepage": "https://github.com/naturalist/coin-mixer-challenge#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "chai": "^4.1.2",
     "config": "^1.29.2",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "mocha": "^5.0.0",
+    "sinon": "^4.2.1"
   }
 }
