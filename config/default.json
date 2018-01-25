@@ -8,5 +8,10 @@
     "verify": {
         "timeout": 3000,
         "tries": 100
+    },
+
+    "jobcoin": {
+        "host": "jobcoin.gemini.com",
+        "port": 80
     }
 }
