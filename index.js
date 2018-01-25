@@ -1,6 +1,8 @@
+const config = require('config')
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
+const jobcoin = require('./lib/jobcoin.js')
 const mixer = require('./lib/mixer.js')
 
 // All params will be JSON
@@ -22,5 +24,7 @@ app.post('/new', (req, res) => {
     res.send({success: true})
   }
 })
+
+mixer.process()
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'))
