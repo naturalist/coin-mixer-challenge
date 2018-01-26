@@ -4,6 +4,7 @@ const app = express()
 const bodyParser = require('body-parser')
 const jobcoin = require('./lib/jobcoin.js')
 const mixer = require('./lib/mixer.js')
+const iterator = mixer.makeIterator()
 
 // All params will be JSON
 app.use(bodyParser.json())
@@ -27,6 +28,10 @@ app.post('/new', (req, res) => {
   }
 })
 
-mixer.process()
+var cb = function() {
+  setTimeout(()=> iterator(cb), Math.floor(Math.random() * 10000))
+}
+
+iterator(cb)
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'))
