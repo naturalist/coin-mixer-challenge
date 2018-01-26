@@ -62,4 +62,6 @@ Once the transaction is found, the record is updated with the `amount` and `time
 
 At this point the record is included in rotation with the rest of the records (assuming there are more).
 
-The mixer sends part of the coins to the first record's first recepient address, then the second record's first recepient address, etc. When all records are iterated, the mixer begins sending to the second recepent address, etc.
+The mixer sends part of the coins to the first record's first recepient address, then the second record's first recepient address, etc. When all records are iterated, the mixer begins sending to the second recepent address, etcj
+
+![jobcoin](media/coin.png)
