@@ -12,6 +12,8 @@ app.use((req, res, next) => {
     next()
 })
 
+app.use(express.static('public'))
+
 app.post('/new', (req, res) => {
   if (!req.body.fromAddress) {
     res.status(400).send({error: "Invalid fromAddress"})

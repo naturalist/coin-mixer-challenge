@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css">
+    <style type="text/css">
+      #message {
+        display: none;
+        text-align: center;
+        padding: 10px;
+        font-weight: bold;
+      }
+      .error { background-color: #EAA; }
+      .success { background-color: #AEA; }
+    </style>
+    <script src="app.js"></script>
+    <script type="text/javascript">
+      window.onload = app.run;
+    </script>
+  </head>
+  <body>
+    <h1>Jobcoin Mixer Request</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-8 col-lg-6" id="message"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-8 col-lg-6">
+          <form id="frm">
+            <fieldset>
+              <div class="input-group fluid">
+                  <label for="fromAddress">Source Address:</label>
+                  <input value="" id="fromAddress" placeholder="from address">
+              </div>
+              <div class="input-group fluid">
+                  <label>Destination Address:</label>
+                  <input value="" class="toAddress" placeholder="to address">
+              </div>              
+              <div class="input-group fluid">
+                  <label>Destination Address:</label>
+                  <input value="" class="toAddress" placeholder="to address">
+              </div>              
+              <div class="input-group fluid">
+                <button id="send"> Send Request </button>
+              </div>              
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      
+    </div>
+  </body>
+</html>
