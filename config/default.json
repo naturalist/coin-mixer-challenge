@@ -1,4 +1,6 @@
 {
+    "debug": true,
+
     "mixer": {
         "address": "Mixer",
         "commission": 0.03,
