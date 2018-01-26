@@ -64,4 +64,11 @@ At this point the record is included in rotation with the rest of the records (a
 
 The mixer sends part of the coins to the first record's first recepient address, then the second record's first recepient address, etc. When all records are iterated, the mixer begins sending to the second recepent address, etcj
 
+The iteration of recepient addreses happens at a random time interval.
+
 ![jobcoin](media/coin.png)
+
+## Issues
+
+* The mixer works best when servicing multiple users at the same time. A single user may be guessed easliy.
+* Each user should provide as many to-addresses as possible. A single to-address may be guessed easily.
