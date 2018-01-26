@@ -45,4 +45,21 @@ curl -H "Content-type: application/json" -d '{"fromAddress": "Charlie", "toAddre
 
 ## Algorithm
 
+Once a mixing request is made (via the UI, or curl), it is recorded in the mixer as the following structure:
 
+```Javascript
+record = {
+    fromAddress: String,
+    toAddress: Array[String],
+    timestamp: Date,
+    amount: Number = null
+}
+```
+
+A new process is spawned to periodically poll the Jobcoin network and look for a transaction that matches the above record.
+
+Once the transaction is found, the record is updated with the `amount` and `timestamp` found in the Jobcoin transaction.
+
+At this point the record is included in rotation with the rest of the records (assuming there are more).
+
+The mixer sends part of the coins to the first record's first recepient address, then the second record's first recepient address, etc. When all records are iterated, the mixer begins sending to the second recepent address, etc.
