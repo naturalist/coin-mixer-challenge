@@ -26,6 +26,14 @@ To run all tests, type:
 ./node_modules/.bin/mocha tests/
 ```
 
+### Running the application
+
+To run the mixer application type:
+
+```
+node index
+```
+
 ## How to use it
 
 1. Navigate to the main page
