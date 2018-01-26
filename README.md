@@ -6,4 +6,43 @@ Create a Jobcoin mixer, given the Jobocoin API provided [https://jobcoin.gemini.
 
 ## Solution
 
-This Jobcoin mixer has been written in Javascript and it runs on Node.js version 9.4.0.
+This Jobcoin mixer has been written in JavaScript and it runs on Node.js. It uses a _round robin_ approach to obfuscate it's outputs. See below for extended explanation of algorithm.
+
+## Installation and testing
+
+See live working version of this project at [http://heroku.com](Heroku)
+
+### Installation
+
+To install, make sure you have Node.js version 9.4.0, then run:
+
+```
+npm install
+```
+
+### Testing
+
+To run all tests, type:
+
+```
+./node_modules/.bin/mocha tests/
+```
+
+## How to use it
+
+1. Navigate to the main page
+2. Enter your Jobcoin from-address and up to three to-addresses
+3. Click the Send button
+4. Navigate to [https://jobcoin.gemini.com/hazy](https://jobcoin.gemini.com/hazy) and send coins from _from-address_ to address _Mixer_
+5. The Mixer will notice the transfer and begin the mixing process
+
+
+Note that the limitation of three addresses is only in the HTML UI. If you used `curl` to make a POST request to the server, you'd be able to send as many to-addresses as you wished. For example, you can try this:
+
+```
+curl -H "Content-type: application/json" -d '{"fromAddress": "Charlie", "toAddress":["Charlie01","Charlie02","Charlie03","Charlie04","Charlie05"]}' localhost:3000/new
+```
+
+## Algorithm
+
+

@@ -9,12 +9,12 @@ describe('Mixer', ()=> {
   
   var refund, pay
 
-  before(()=> {
+  beforeEach(()=> {
     refund = sinon.stub(jobcoin, "refund").callsFake((rec, onSuccess, onError) => { onSuccess() })
     pay = sinon.stub(jobcoin, "pay").callsFake((address, amount, onSuccess, onCancel)=> { onSuccess() })
   })
 
-  after(()=> {
+  afterEach(()=> {
     refund.restore()
     pay.restore()
   })
@@ -101,6 +101,7 @@ describe('Mixer', ()=> {
         expect(mixer.wallet[0].toAddress).to.have.lengthOf(1)
         expect(mixer.wallet[0].toAddress[0]).to.equal('A2')
         expect(mixer.wallet[0].amount).to.equal(1)
+        expect(pay.calledOnce).to.be.true
         done()
       })
     })
@@ -111,6 +112,7 @@ describe('Mixer', ()=> {
         expect(mixer.wallet[1].toAddress).to.have.lengthOf(2)
         expect(mixer.wallet[1].toAddress[0]).to.equal('B2')
         expect(mixer.wallet[1].amount).to.equal(2)
+        expect(pay.calledOnce).to.be.true
         done()
       })
     })
@@ -121,6 +123,7 @@ describe('Mixer', ()=> {
         expect(mixer.wallet[0].toAddress).to.have.lengthOf(2)
         expect(mixer.wallet[0].toAddress[0]).to.equal('B2')
         expect(mixer.wallet[0].amount).to.equal(2)
+        expect(pay.calledOnce).to.be.true
         done()
       })
     })
@@ -131,6 +134,7 @@ describe('Mixer', ()=> {
         expect(mixer.wallet[0].toAddress).to.have.lengthOf(1)
         expect(mixer.wallet[0].toAddress[0]).to.equal('B3')
         expect(mixer.wallet[0].amount).to.equal(1)
+        expect(pay.calledOnce).to.be.true
         done()
       })
     })
@@ -138,6 +142,7 @@ describe('Mixer', ()=> {
     it('fifth run', (done)=> {
       iterator(()=> {
         expect(mixer.wallet).to.have.lengthOf(0)
+        expect(pay.calledOnce).to.be.true
         done()
       })
     })
