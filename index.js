@@ -5,6 +5,7 @@ const bodyParser = require('body-parser')
 const jobcoin = require('./lib/jobcoin.js')
 const mixer = require('./lib/mixer.js')
 const iterator = mixer.makeIterator()
+const port = process.env.PORT || 3000;
 
 // All params will be JSON
 app.use(bodyParser.json())
@@ -34,4 +35,4 @@ var cb = function() {
 
 iterator(cb)
 
-app.listen(5000, () => console.log('Example app listening on port 3000!'))
+app.listen(port, () => console.log('Example app listening on port 3000!'))
