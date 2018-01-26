@@ -10,8 +10,6 @@ This Jobcoin mixer has been written in JavaScript and it runs on Node.js. It use
 
 ## Installation and testing
 
-See live working version of this project at [http://heroku.com](Heroku)
-
 ### Installation
 
 To install, make sure you have Node.js version 9.4.0, then run:
