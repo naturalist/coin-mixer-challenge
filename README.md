@@ -10,6 +10,8 @@ This Jobcoin mixer has been written in JavaScript and it runs on Node.js. It use
 
 ## Installation and testing
 
+To see a live working example of this application in Heroku go to [https://enigmatic-ravine-38023.herokuapp.com](https://enigmatic-ravine-38023.herokuapp.com)
+
 ### Installation
 
 To install, make sure you have Node.js version 9.4.0, then run:
